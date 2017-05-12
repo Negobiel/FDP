@@ -35,31 +35,40 @@ function SESQ(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod 222 $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
 function SLER(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod 444 $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
 function SEXE(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod +x $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
+
 function LEEX(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod 555 $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
+
 function ESEX(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod 666 $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
+
 function PETO(){
 NAME=$(dialog --title 'Nome' --inputbox 'Insira o nome do Arquivo para "Permissionar" ' 0 0)
 chmod 777 $NAME
 dialog --title 'Informação' --msgbox 'Permissionado com sucesso' 0 0
+PERM
 }
 
 function PERM(){
@@ -86,7 +95,7 @@ case $OPCAO in
 	6) ESEX ;;
 	7) PETO ;;
 	8) GARQ ;;
-	*) dialog --title "Opção invalida" --msgbox "Digite Novamente" 0 0 ; GARQ ;;
+	*) dialog --title "Opção invalida" --msgbox "Digite Novamente" 0 0 ; PERM ;;
 esac
 }
 
